@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use the Artificial Algae Algorithm, please cite the original publication."
+title: "Artificial algae algorithm (AAA) for nonlinear global optimization"
+authors:
+  - family-names: Uymaz
+    given-names: Sait Ali
+  - family-names: Tezel
+    given-names: Gulay
+  - family-names: Yel
+    given-names: Esra
+type: article
+journal: Applied Soft Computing
+volume: 31
+pages: 153-171
+year: 2015
+doi: 10.1016/j.asoc.2015.03.003
+url: https://doi.org/10.1016/j.asoc.2015.03.003
