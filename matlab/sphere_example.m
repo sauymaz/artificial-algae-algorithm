@@ -1,10 +1,9 @@
-% SPHERE_EXAMPLE Demonstrates the intended AAA call pattern.
+% SPHERE_EXAMPLE Run the published AAA mechanism on the Sphere function.
 addpath(fileparts(mfilename('fullpath')));
-n = 10;
-objective = @(x) sum(x.^2);
-lowerBounds = -5.12 * ones(1, n);
-upperBounds = 5.12 * ones(1, n);
-options = struct('populationSize', 30, 'maxIterations', 500);
-
-% aaa is currently a placeholder and will report NotImplemented.
-[bestPosition, bestValue, history] = aaa(objective, lowerBounds, upperBounds, options); %#ok<NASGU>
+parameters = struct('MaxFEVs', 10000, 'N', 40, 'D', 10, ...
+    'LB', -100, 'UB', 100, 'K', 2, 'le', 0.3, 'Ap', 0.5);
+[bestValue, bestPosition, history] = aaa(@Sphere, parameters);
+fprintf('Best value: %.6g\n', bestValue);
+disp('Best position:');
+disp(bestPosition);
+plot(history); xlabel('Iteration'); ylabel('Best fitness'); grid on;

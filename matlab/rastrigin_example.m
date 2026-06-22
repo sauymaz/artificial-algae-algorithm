@@ -1,10 +1,9 @@
-% RASTRIGIN_EXAMPLE Demonstrates the intended AAA call pattern.
+% RASTRIGIN_EXAMPLE Run the published AAA mechanism on Rastrigin.
 addpath(fileparts(mfilename('fullpath')));
-n = 10;
-objective = @(x) 10*n + sum(x.^2 - 10*cos(2*pi*x));
-lowerBounds = -5.12 * ones(1, n);
-upperBounds = 5.12 * ones(1, n);
-options = struct('populationSize', 30, 'maxIterations', 500);
-
-% aaa is currently a placeholder and will report NotImplemented.
-[bestPosition, bestValue, history] = aaa(objective, lowerBounds, upperBounds, options); %#ok<NASGU>
+parameters = struct('MaxFEVs', 10000, 'N', 40, 'D', 10, ...
+    'LB', -5.12, 'UB', 5.12, 'K', 2, 'le', 0.3, 'Ap', 0.5);
+[bestValue, bestPosition, history] = aaa(@rastrigin, parameters);
+fprintf('Best value: %.6g\n', bestValue);
+disp('Best position:');
+disp(bestPosition);
+plot(history); xlabel('Iteration'); ylabel('Best fitness'); grid on;

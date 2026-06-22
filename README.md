@@ -10,8 +10,8 @@ The original article is available through its [DOI](https://doi.org/10.1016/j.as
 
 ## Repository layout
 
-- `matlab/` — documented MATLAB implementation placeholders and examples.
-- `python/` — Python package scaffold, benchmarks, and examples.
+- `matlab/` — runnable simplified MATLAB optimizer and examples.
+- `python/` — runnable simplified Python optimizer, benchmarks, and examples.
 - `docs/` — algorithm notes, pseudocode, and benchmark context.
 - `data/references.bib` — BibTeX reference for the original publication.
 
@@ -26,7 +26,7 @@ addpath('matlab')
 sphere_example
 ```
 
-`aaa.m` is a documented placeholder interface; it deliberately signals that a complete, validated implementation must be supplied before results are relied upon.
+`aaa.m` implements the AAA helical movement, evolutionary process, adaptation process, greatness calculation, friction surface, and tournament selection from the supplied reference code.
 
 ## Python usage
 
@@ -36,7 +36,7 @@ No third-party dependencies are required. From the repository root:
 python python/examples/sphere_example.py
 ```
 
-The Python optimizer is a clean API skeleton, not a validated AAA implementation. The examples show the intended invocation pattern and benchmark functions.
+The Python optimizer is a dependency-free translation of the MATLAB AAA reference implementation.
 
 ## Benchmark examples
 
@@ -44,4 +44,4 @@ Included examples cover Sphere, Rastrigin, Rosenbrock, and Ackley functions. See
 
 ## Disclaimer
 
-This repository is intended for academic reference and reproducibility work. The supplied algorithm files are placeholders and must be completed, reviewed, and validated for a particular research use before drawing scientific or engineering conclusions.
+This repository is intended for academic reference and reproducibility work. Validate parameter choices, benchmark protocols, and results independently before drawing scientific or engineering conclusions.

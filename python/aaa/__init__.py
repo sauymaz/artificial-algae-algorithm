@@ -1,4 +1,4 @@
-"""Artificial Algae Algorithm public API (placeholder)."""
+"""Public API for the simplified optimizer derived from the supplied AAA.m."""
 
 from .optimizer import ArtificialAlgaeAlgorithm
 
